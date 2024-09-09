@@ -1,0 +1,43 @@
+version: 0.0.1
+jobId: "151"
+jobName: Trial - Demo - Aneree copy
+jobType: DataSets
+developerId: d596eedd-7281-4a97-8fc2-1308647c4ad2
+domain: manufacturing
+alias: ""
+discoveryPort:
+  name: Trial - Demo - Aneree copy
+inputPorts:
+  - alias: Parquet_1
+    isDynamic: true
+    path: sd
+    optional:
+      persistDataFrame: false
+      columnsToDecrypt:
+        - fd
+      advanceOptions:
+        mergeSchema: true
+      enableDataReconciliation: false
+      enforceSchema: false
+      enforceSchemaMethod: Error
+      connection: Salesforce
+      dataSetUrn: ""
+    type: inputParquet
+    dataProductUrn: ""
+productState:
+  isDynamic: true
+  alias: ""
+  retentionVersions: ""
+  logicalSchema: ""
+  stateStoreType: writeDataFrameToParquet
+  isProfilingEnabled: false
+  path: ""
+  optional:
+    persistDataFrame: false
+    addRunIdColumn: false
+    enableDataReconciliation: false
+    enforceSchema: false
+  refreshInterval: None
+transformation: []
+controlPort:
+  dataQualityRules: {}
